@@ -119,6 +119,8 @@ void String::split(const char* delimiters, String** output,
     *size = (size_t)tokens.size();
     if (output != NULL) {
         *output = str_array;
+    }else {
+    	delete[] str_array;
     }
 }
 
